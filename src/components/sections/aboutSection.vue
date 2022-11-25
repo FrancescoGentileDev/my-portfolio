@@ -22,10 +22,10 @@
             class="text-tertiary text-xl mt-10 md:text-left flex flex-col gap-4"
           >
             <p>
-              Hello stranger! I'm Francesco and i enjoy creating things that
+              Hello stranger! I'm Francesco, i live in Italy and i enjoy creating things that
               live on internet.
             </p>
-            <p>
+            <p class="hidden sm:block">
               My interest in web development started back in high school, where
               i created a student blog. In 2020 I began to study React and
               Node.js as a self-taught, for a project I had in mind

@@ -6,17 +6,18 @@
 <header-section class="fixed w-full z-50"/>
 <hero-section class="pt-28 z-0"/>
 <about-section  class="md:pt-10 z-0"/>
+<project-section class="mt-14 z-0"/>
 </div>
 </template>
 
 
 <script>
-import SocialsComponent from './components/components/socialsComponent.vue'
 import AboutSection from './components/sections/aboutSection.vue'
 import headerSection from './components/sections/headerSection.vue'
 import HeroSection from './components/sections/heroSection.vue'
+import ProjectSection from './components/sections/projectSection.vue'
 export default {
-  components: { headerSection, HeroSection, AboutSection, SocialsComponent },
+  components: { headerSection, HeroSection, AboutSection, ProjectSection},
   
 }
 </script>

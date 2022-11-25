@@ -1,7 +1,7 @@
 <template>
   <div class="h-screen hero-background">
     <div
-      class="w-6/12 h-full container mx-auto flex flex-col justify-center items-left relative"
+      class="md:w-6/12 px-10 h-full container mx-auto flex flex-col justify-center items-left relative"
     >
       <h3 class="sm:text-3xl text-md  text-marrone2 font-semibold">Hi my name is,</h3>
       <h1 class="sm:text-8xl text-6xl font-extrabold text-quaternary">Francesco Gentile</h1>
