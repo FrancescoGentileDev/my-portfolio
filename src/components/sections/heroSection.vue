@@ -3,9 +3,9 @@
     <div
       class="w-6/12 h-full container mx-auto flex flex-col justify-center items-left relative"
     >
-      <h3 class="text-3xl text-marrone2 font-semibold">Hi my name is,</h3>
-      <h1 class="text-8xl font-extrabold text-quaternary">Francesco Gentile</h1>
-      <p class="text-7xl text-secondary font-extrabold mt-1 mb-7">
+      <h3 class="sm:text-3xl text-marrone2 font-semibold">Hi my name is,</h3>
+      <h1 class="sm:text-8xl font-extrabold text-quaternary">Francesco Gentile</h1>
+      <p class="sm:text-7xl text-secondary font-extrabold mt-1 mb-7">
         Learning new things every day
       </p>
       <p class="text-2xl font-semibold text-darkGrey">
@@ -16,7 +16,7 @@
       >
         My Projects
       </button>
-      <div class="mouse-container flex bottom-5 left-1/2 translate-x-1/2 justify-center items-end absolute">
+      <div class="mouse-container flex bottom-5 w-full justify-center items-end absolute">
         <div class="mouse h-16 w-10 border-2 border-grey rounded-full select-none relative">
         <div class="dot w-3 h-3 bg-grey rounded-full mt-2 top-0 absolute left-1/2 -translate-x-1/2"></div>
         </div>

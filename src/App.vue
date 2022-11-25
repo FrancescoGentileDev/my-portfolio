@@ -2,19 +2,21 @@
 
 <template>
 <div>
-<header-section class="fixed w-full"/>
-<hero-section class="pt-28"/>
-<about-section />
+<!-- <socials-component class="fixed"/> -->
+<header-section class="fixed w-full z-50"/>
+<hero-section class="pt-28 z-0"/>
+<about-section  class="pt-36 z-0"/>
 </div>
 </template>
 
 
 <script>
+import SocialsComponent from './components/components/socialsComponent.vue'
 import AboutSection from './components/sections/aboutSection.vue'
 import headerSection from './components/sections/headerSection.vue'
 import HeroSection from './components/sections/heroSection.vue'
 export default {
-  components: { headerSection, HeroSection, AboutSection },
+  components: { headerSection, HeroSection, AboutSection, SocialsComponent },
   
 }
 </script>
