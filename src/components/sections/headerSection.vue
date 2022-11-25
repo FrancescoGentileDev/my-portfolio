@@ -1,5 +1,5 @@
 <template>
-  <div class="h-24 flex items-center justify-between px-40 pt-3 bg-background border-b-2 border-opacity-5 border-grey">
+  <div class="h-24 flex items-center justify-between px-40 pt-3 bg-background bg-opacity-30 border-b-2 border-opacity-10 border-grey backdrop-blur-md ">
     <div class="logo w-16">
    <a href="/"><img src="../../assets/logo.svg" class="w-full" alt="logo"></a> 
     </div>
