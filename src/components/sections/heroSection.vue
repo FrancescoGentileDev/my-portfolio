@@ -3,20 +3,20 @@
     <div
       class="w-6/12 h-full container mx-auto flex flex-col justify-center items-left relative"
     >
-      <h3 class="sm:text-3xl text-marrone2 font-semibold">Hi my name is,</h3>
-      <h1 class="sm:text-8xl font-extrabold text-quaternary">Francesco Gentile</h1>
-      <p class="sm:text-7xl text-secondary font-extrabold mt-1 mb-7">
+      <h3 class="sm:text-3xl text-md  text-marrone2 font-semibold">Hi my name is,</h3>
+      <h1 class="sm:text-8xl text-6xl font-extrabold text-quaternary">Francesco Gentile</h1>
+      <p class="sm:text-7xl text-4xl text-secondary font-extrabold mt-4 mb-7">
         Learning new things every day
       </p>
-      <p class="text-2xl font-semibold text-darkGrey">
+      <p class="sm:text-2xl font-semibold text-darkGrey">
         I'm a web developer, and a technology enthusiast.
       </p>
       <button
-        class="w-fit px-5 py-2 font-semibold text-2xl mt-8 ml-3 bg-marrone1 text-background hover:bg-marrone2"
+        class="w-fit px-5 py-2 font-semibold sm:text-2xl mt-8 ml-3 bg-marrone1 text-background hover:bg-marrone2"
       >
         My Projects
       </button>
-      <div class="mouse-container flex bottom-5 w-full justify-center items-end absolute">
+      <div class="mouse-container bottom-5 w-full justify-center items-end absolute hidden md:flex">
         <div class="mouse h-16 w-10 border-2 border-grey rounded-full select-none relative">
         <div class="dot w-3 h-3 bg-grey rounded-full mt-2 top-0 absolute left-1/2 -translate-x-1/2"></div>
         </div>
