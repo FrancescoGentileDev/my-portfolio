@@ -1,6 +1,6 @@
 <template>
   <div
-    class="h-24 flex items-center justify-between px-5 sm:px-40 pt-3 bg-background bg-opacity-30 border-b-2 border-opacity-10 border-grey backdrop-blur-md"
+    class="h-24 flex items-center justify-between px-5 md:px-40 pt-3 bg-background bg-opacity-30 border-b-2 border-opacity-10 border-grey backdrop-blur-md"
   >
     <div class="logo w-16">
       <a href="/" class="w-full"

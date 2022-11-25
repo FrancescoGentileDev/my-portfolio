@@ -5,7 +5,7 @@
 <!-- <socials-component class="fixed"/> -->
 <header-section class="fixed w-full z-50"/>
 <hero-section class="pt-28 z-0"/>
-<about-section  class="pt-36 z-0"/>
+<about-section  class="md:pt-10 z-0"/>
 </div>
 </template>
 

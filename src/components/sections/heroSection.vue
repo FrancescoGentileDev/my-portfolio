@@ -5,10 +5,10 @@
     >
       <h3 class="sm:text-3xl text-md  text-marrone2 font-semibold">Hi my name is,</h3>
       <h1 class="sm:text-8xl text-6xl font-extrabold text-quaternary">Francesco Gentile</h1>
-      <p class="sm:text-7xl text-4xl text-secondary font-extrabold mt-4 mb-7">
+      <p class="md:text-7xl text-4xl text-secondary font-extrabold mt-4 mb-7">
         Learning new things every day
       </p>
-      <p class="sm:text-2xl font-semibold text-darkGrey">
+      <p class="md:text-2xl font-semibold text-darkGrey">
         I'm a web developer, and a technology enthusiast.
       </p>
       <button
