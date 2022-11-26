@@ -1,6 +1,8 @@
 <template>
   <div
-    class="h-24 flex items-center justify-between px-5 md:px-40 pt-3 bg-background bg-opacity-30 border-b-2 border-opacity-10 border-grey backdrop-blur-md"
+    class="h-24 flex items-center justify-between px-5 md:px-40 pt-3 bg-background bg-opacity-30 border-b-2 border-opacity-10 border-grey backdrop-blur-md transition-all duration-200 top-0"
+    :class="{ '-top-28': hide }"
+    ref="header"
   >
     <div class="logo w-16">
       <a href="/" class="w-full"
@@ -52,7 +54,26 @@ export default {
     return {
       navbar: false,
       right: "-15rem",
+      hide: false,
+      hideValue: 0,
     };
+  },
+  mounted() {
+    window.addEventListener("scroll", () => {
+      let scroll = window.scrollY;
+
+      if (!this.hide && scroll < this.hideValue) {
+        this.hide = false;
+        this.hideValue = scroll;
+      }
+      else if (scroll >= 900 && scroll > this.hideValue) {
+        this.hide = true;
+        this.hideValue = scroll;
+      } 
+      else {
+        this.hide = false;
+      }
+    });
   },
 };
 </script>
