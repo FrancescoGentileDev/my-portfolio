@@ -6,18 +6,22 @@
 <header-section class="fixed w-full z-50"/>
 <hero-section class="pt-28 z-0"/>
 <about-section  class="md:pt-10 z-0"/>
-<project-section class="mt-14 z-0"/>
+<project-section class="px-10 mt-14 z-0"/>
+<contact-section class="px-10 mt-14 z-0"/>
+<footer-section class="mt-14 z-0"/>
 </div>
 </template>
 
 
 <script>
 import AboutSection from './components/sections/aboutSection.vue'
+import ContactSection from './components/sections/contactSection.vue'
+import FooterSection from './components/sections/footerSection.vue'
 import headerSection from './components/sections/headerSection.vue'
 import HeroSection from './components/sections/heroSection.vue'
 import ProjectSection from './components/sections/projectSection.vue'
 export default {
-  components: { headerSection, HeroSection, AboutSection, ProjectSection},
+  components: { headerSection, HeroSection, AboutSection, ProjectSection, ContactSection, FooterSection},
   
 }
 </script>

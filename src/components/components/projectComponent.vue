@@ -20,7 +20,7 @@
     </div>
 
     <div class="proj-texts max-w-xl flex flex-col justify-center gap-6 " :class="{'md:items-end' : reverse}">
-      <h5 class="text-4xl font-bold text-tertiary">{{ project.name }}</h5>
+      <h5 class="text-4xl font-bold text-tertiary capitalize">{{ project.name }}</h5>
       <p class="font-semibold text-darkGrey text-xl" :class="{'md:text-right' : reverse}">
         {{ project.description }}
       </p>

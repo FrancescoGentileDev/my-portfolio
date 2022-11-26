@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     './src/**/*.{vue,js,ts,jsx,tsx}',
@@ -9,6 +10,7 @@ module.exports = {
     colors: {
       background: '#0A192F',
       backgroundSecondary: '#30435E',
+      backgroundDarker: '#060f1d',
       primary: '#DE5745',
       secondary: '#2F75DE',
       tertiary: '#AFDE18',
@@ -31,5 +33,7 @@ module.exports = {
 
     }
   },
-  plugins: [],
+  plugins: [
+      require('tw-elements/dist/plugin')
+    ],
 }

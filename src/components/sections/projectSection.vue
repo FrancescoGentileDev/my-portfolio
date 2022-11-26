@@ -4,7 +4,7 @@
       title="projects"
       subTitle="Here you will find some of my project with a live demo"
     />
-    <div class="projects-container flex flex-col mt-16 gap-24">
+    <div class="projects-container flex flex-col mt-16 gap-12">
       <project-component
         v-for="(project, index) in projects"
         :key="index"
