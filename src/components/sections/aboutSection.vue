@@ -1,17 +1,6 @@
 <template>
   <div id="about" class="container mx-auto">
-    <div class="title">
-      <h2
-        class="text-center text-tertiary text-3xl md:text-5xl uppercase font-bold"
-      >
-        About me
-      </h2>
-      <div class="divider bg-marrone1"></div>
-    </div>
-    <p class="text-tertiary text-center text-lg md:text-xl">
-      Here you will find more information about me, and my current skills in
-      programming and technology
-    </p>
+    <title-component title="about me" subTile='Here you will find more information about me, and my current skills in programming and technology'/>
     <div class="abouts-container flex flex-col mt-16 gap-7">
       <div class="knowme flex flex-wrap justify-center items-center gap-9">
         <div class="flex flex-col h-full md:w-1/2 text-center px-2">
@@ -22,8 +11,8 @@
             class="text-tertiary text-xl mt-10 md:text-left flex flex-col gap-4"
           >
             <p>
-              Hello stranger! I'm Francesco, i live in Italy and i enjoy creating things that
-              live on internet.
+              Hello stranger! I'm Francesco, i live in Italy and i enjoy
+              creating things that live on internet.
             </p>
             <p class="hidden sm:block">
               My interest in web development started back in high school, where
@@ -88,7 +77,6 @@
             Sass
           </li>
           <li>
-            <font-awesome-icon icon="fa-brands fa-sql" />
             SQL
           </li>
           <li>
@@ -219,7 +207,12 @@
 </template>
 
 <script>
-export default {};
+import titleComponent from '../components/titleComponent.vue';
+export default {
+components: {
+  titleComponent
+}
+};
 </script>
 
 <style lang="scss" scoped>

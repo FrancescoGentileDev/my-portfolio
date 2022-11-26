@@ -1,28 +1,33 @@
 <template>
-  <div id="about" class="container mx-auto">
-    <div class="title">
-      <h2
-        class="text-center text-tertiary text-3xl md:text-5xl uppercase font-bold"
-      >
-        PROJECTS
-      </h2>
-      <div class="divider bg-marrone1"></div>
+  <div id="projects" class="container mx-auto">
+    <title-component
+      title="projects"
+      subTitle="Here you will find some of my project with a live demo"
+    />
+    <div class="projects-container flex flex-col mt-16 gap-24">
+      <project-component
+        v-for="(project, index) in projects"
+        :key="index"
+        :project="project"
+        :reverse="index % 2 !==0"
+      />
     </div>
-    <p class="text-tertiary text-center text-lg md:text-xl">
-      Here you will find some of my project with a live demo
-    </p>
   </div>
 </template>
 
 <script>
-export default {};
+import ProjectComponent from "../components/projectComponent.vue";
+import titleComponent from "../components/titleComponent.vue";
+import projects from "@/data/projects.js";
+export default {
+  components: { titleComponent, ProjectComponent },
+  data() {
+    return {
+      projects,
+    };
+  },
+};
 </script>
 
-<style>
-.divider {
-  width: 80px;
-  height: 8px;
-  margin: 2rem auto;
-  border-radius: 40px;
-}
-</style>
+ProjectComponent
+<style></style>
