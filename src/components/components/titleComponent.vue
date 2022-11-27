@@ -1,6 +1,6 @@
 <template>
 <div>
- <div class="title">
+ <div class="title" data-aos='zoom-in'>
       <h2
         class="text-center text-tertiary text-3xl md:text-5xl uppercase font-bold"
       >

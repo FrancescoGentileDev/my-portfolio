@@ -1,22 +1,24 @@
 <template>
-  <div class="h-screen hero-background">
+  <div class="h-screen hero-background" id="home">
+  <socials-component class="hidden md:block absolute" data-aos='fade-right' data-aos-delay='1300'  data-aos-duration='1300' data-aos-once='true'/>
     <div
       class="md:w-6/12 px-10 h-full container mx-auto flex flex-col justify-center items-left relative"
     >
-      <h3 class="sm:text-3xl text-md  text-marrone2 font-semibold">Hi my name is,</h3>
-      <h1 class="sm:text-8xl text-6xl font-extrabold text-quaternary">Francesco Gentile</h1>
-      <p class="md:text-7xl text-4xl text-secondary font-extrabold mt-4 mb-7">
+      <h3 data-aos='fade-left' data-aos-delay='300'  data-aos-duration='700'  data-aos-once='true' class="sm:text-3xl text-md  text-marrone2 font-semibold" >Hi my name is,</h3>
+      <h1 data-aos='flip-right' data-aos-delay='800' data-aos-duration='1000'  data-aos-once='true'   class="sm:text-8xl text-6xl font-extrabold text-quaternary">Francesco Gentile</h1>
+      <p  data-aos='fade-down' data-aos-delay='1200'  data-aos-duration='1300'  data-aos-once='true'  class="md:text-7xl text-4xl text-secondary font-extrabold mt-4 mb-7">
         Learning new things every day
       </p>
-      <p class="md:text-2xl font-semibold text-darkGrey">
+      <p data-aos='fade' data-aos-delay='1400'  data-aos-duration='1000'  data-aos-once='true' class="md:text-2xl font-semibold text-darkGrey">
         I'm a web developer, and a technology enthusiast.
       </p>
-      <button
-        class="w-fit px-5 py-2 font-semibold sm:text-2xl mt-8 ml-3 bg-marrone1 text-background hover:bg-marrone2"
-      >
+      <div data-aos='zoom-in' data-aos-delay='1700'  data-aos-duration='1000'  data-aos-once='true' class="w-fit px-5 py-2 font-semibold sm:text-2xl mt-8 ml-3 bg-marrone1 text-background hover:bg-marrone2">
+      
+      <router-link to="#projects" >
         My Projects
-      </button>
-      <div class="mouse-container bottom-5 w-full justify-center items-end absolute hidden md:flex">
+      </router-link>
+      </div>
+      <div class="mouse-container bottom-5 w-full justify-center items-end absolute hidden md:flex" >
         <div class="mouse h-16 w-10 border-2 border-grey rounded-full select-none relative">
         <div class="dot w-3 h-3 bg-grey rounded-full mt-2 top-0 absolute left-1/2 -translate-x-1/2"></div>
         </div>
@@ -26,7 +28,9 @@
 </template>
 
 <script>
-export default {};
+import socialsComponent from '../components/socialsComponent.vue';
+export default {
+  components: { socialsComponent },};
 </script>
 
 <style lang="scss" scoped>

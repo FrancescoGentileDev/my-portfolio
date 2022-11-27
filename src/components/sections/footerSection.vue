@@ -8,8 +8,10 @@
       <div class="flex flex-col gap-6">
         <h5 class="text-3xl font-extrabold text-secondary">SOCIALS</h5>
         <div class="flex text-3xl gap-4 text-tertiary">
-            <font-awesome-icon class="hover:text-quinary" icon="fa-brands fa-linkedin" />
-            <font-awesome-icon class="hover:text-quinary" icon="fa-brands fa-github" />
+        <a href="https://www.linkedin.com/in/francesco-gentile-a21ab7198/" target="_blank">
+            <font-awesome-icon class="hover:text-quinary" icon="fa-brands fa-linkedin" rel="noopener noreferrer" /></a>
+            <a href="https://github.com/FrancescoGentileDev/" target="_blank" rel="noopener noreferrer">
+            <font-awesome-icon class="hover:text-quinary" icon="fa-brands fa-github" /></a>
         </div>
       </div>
     </div>

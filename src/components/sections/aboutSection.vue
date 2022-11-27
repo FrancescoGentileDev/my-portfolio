@@ -1,42 +1,42 @@
 <template>
-  <div id="about" class="container mx-auto">
+  <div id="about" class="container mx-auto pb-10">
     <title-component title="about me" subTile='Here you will find more information about me, and my current skills in programming and technology'/>
     <div class="abouts-container flex flex-col mt-16 gap-7">
       <div class="knowme flex flex-wrap justify-center items-center gap-9">
         <div class="flex flex-col h-full md:w-1/2 text-center px-2">
-          <h4 class="uppercase font-bold text-3xl text-secondary text-center">
+          <h4 class="uppercase font-bold text-3xl text-secondary text-center" data-aos='zoom-in'  data-aos-once='true' data-aos-delay='100' data-aos-duration='500'>
             Get know me
           </h4>
           <div
             class="text-tertiary text-xl mt-10 md:text-left flex flex-col gap-4"
           >
-            <p>
+            <p data-aos='fade'  data-aos-once='true'>
               Hello stranger! I'm Francesco, i live in Italy and i enjoy
               creating things that live on internet.
             </p>
-            <p class="hidden sm:block">
+            <p class="hidden sm:block"  data-aos='fade'  data-aos-once='true'>
               My interest in web development started back in high school, where
               i created a student blog. In 2020 I began to study React and
               Node.js as a self-taught, for a project I had in mind
               (ultimate-notification).
             </p>
-            <p>
+            <p  data-aos='fade-down' data-aos-delay='20'  data-aos-once='true'>
               I fell in love with the idea of ​​being able to create things that
               could then be sought by anyone i understood that this was my way.
               I attended a bootcamp to learn the base of this job.
             </p>
-            <p>
+            <p  data-aos='fade-down' data-aos-delay='40'  data-aos-once='true'>
               Now I'm ready for job opportunities where I can
               <strong>contribute, create, learn and grow</strong>. Below you
               will find some projects that I have developed.
             </p>
-            <p>
+            <p  data-aos='fade-down' data-aos-delay='60'  data-aos-once='true'>
               If you have a good opportunity that matches my skills and
               experience then don't hesitate, <strong>contact me</strong>.
             </p>
           </div>
         </div>
-        <div class="image flex max-w-xs">
+        <div class="image flex max-w-xs" data-aos='flip-right' data-aos-delay='100'  data-aos-duration='1000' >
           <img
             src="https://media-exp1.licdn.com/dms/image/C4E03AQHsIWb7TfGL5A/profile-displayphoto-shrink_800_800/0/1655475496666?e=1674691200&v=beta&t=-cFDMmmYj0L5IvwLnFfEEEW7lKRgc6itz5-ju0-dis4"
             alt="my foto"
@@ -50,7 +50,7 @@
           Skills
         </h4>
         <ul
-          class="skills-pill flex flex-wrap gap-4 text-1xl mt-10 max-w-7xl mx-auto justify-center"
+          class="skills-pill flex flex-wrap gap-4 text-1xl mt-10 max-w-7xl mx-auto justify-center" ref="skills"
         >
           <li>
             <font-awesome-icon icon="fa-brands fa-html5" />
@@ -211,8 +211,26 @@ import titleComponent from '../components/titleComponent.vue';
 export default {
 components: {
   titleComponent
+},
+data() {
+  return {
+   skills: {
+
+   }
+  };
+},
+mounted() {
+ const skills = this.$refs.skills;
+ skills.querySelectorAll('li').forEach((li, index) => {
+  li.setAttribute('data-aos', 'fade-down');
+  li.setAttribute('data-aos-delay', index * 50);
+  li.setAttribute('data-aos-once', 'true');
+
+ });
+
 }
 };
+
 </script>
 
 <style lang="scss" scoped>

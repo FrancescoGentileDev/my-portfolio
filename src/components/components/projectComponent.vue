@@ -2,7 +2,7 @@
   <div class="md:columns-2 flex flex-wrap md:flex-nowrap gap-10"
   :class="{'flex-row-reverse' : reverse}"
   >
-    <div class="proj-img relative max-w-2xl">
+    <div class="proj-img relative max-w-2xl"  :data-aos='reverse? "fade-left": "fade-right" ' data-aos-delay='300' data-aos-duration='500'  data-aos-once='true' >
       <img
         :src="image"
         :alt="project.image"
@@ -19,7 +19,7 @@
       >
     </div>
 
-    <div class="proj-texts max-w-xl flex flex-col justify-center gap-6 " :class="{'md:items-end' : reverse}">
+    <div class="proj-texts max-w-xl flex flex-col justify-center gap-6 " :class="{'md:items-end' : reverse}"  :data-aos='reverse? "fade-right": "fade-left" '   data-aos-once='true'  data-aos-duration='500' data-aos-delay='300'>
       <h5 class="text-4xl font-bold text-tertiary capitalize">{{ project.name }}</h5>
       <p class="font-semibold text-darkGrey text-xl" :class="{'md:text-right' : reverse}">
         {{ project.description }}
