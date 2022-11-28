@@ -1,7 +1,7 @@
 <template>
   <div
     class="h-24 flex items-center justify-between px-5 md:px-40 pt-3 bg-background bg-opacity-30 border-b-2 border-opacity-10 border-grey backdrop-blur-md transition-all duration-200 top-0"
-    :class="{ '-top-28': hide }"
+    :class="{ '-top-28': hide}"
     ref="header"
   >
     <div class="logo w-16">
@@ -18,22 +18,22 @@
         class="gap-10 font text-2xl font-bold text-secondary uppercase hidden sm:flex"
       >
         <li draggable="false">
-          <router-link draggable="false" to="#home">HOME</router-link>
+          <a draggable="false" href="/#home">HOME</a>
         </li>
         <li draggable="false">
-          <router-link draggable="false" to="#about">ABOUT</router-link>
+          <a draggable="false" href="/#about">ABOUT</a>
         </li>
         <li draggable="false">
-          <router-link draggable="false" to="#projects">PROJECTS</router-link>
+          <a draggable="false" href="/#projects">PROJECTS</a>
         </li>
         <li draggable="false">
-          <router-link draggable="false" to="#contact">CONTACT</router-link>
+          <a draggable="false" href="/#contact">CONTACT</a>
         </li>
       </ul>
 
       <div class="menu cross menu--1 sm:hidden">
         <label>
-          <input type="checkbox" @change="this.navbar = !this.navbar" />
+          <input type="checkbox" @change="toggleMenu" />
           <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
             <circle cx="50" cy="50" r="30" />
             <path class="line--1" d="M0 40h62c13 0 6 28-4 18L35 35" />
@@ -43,24 +43,24 @@
         </label>
       </div>
       <div
-        class="hiddenNav fixed w-3/5 h-screen top-24 transition-all duration-300 ease-out delay-100 sm:hidden bg-background bg-opacity-90 backdrop-blur-lg"
+        class="hiddenNav fixed w-3/5 h-screen hrefp-24 transition-all duration-300 ease-out top-24 delay-100 sm:hidden bg-background bg-opacity-90 backdrop-blur-lg"
         ref="hiddenNav"
-        :class="{ 'right-0': navbar, '-right-72': !navbar }"
+        :class="{ 'right-0': navbar, '-right-72': !navbar, 'active': navbar  }"
       >
         <ul
           class="gap-10 text-2xl font-bold text-secondary uppercase flex flex-col items-end p-6"
         >
           <li draggable="false">
-            <router-link draggable="false" to="#home">HOME</router-link>
+            <a draggable="false" href="/#home">HOME</a>
           </li>
           <li draggable="false">
-            <router-link draggable="false" to="#about">ABOUT</router-link>
+            <a draggable="false" href="/#about">ABOUT</a>
           </li>
           <li draggable="false">
-            <router-link draggable="false" to="#projects">PROJECTS</router-link>
+            <a draggable="false" href="/#projects">PROJECTS</a>
           </li>
           <li draggable="false">
-            <router-link draggable="false" to="#contact">CONTACT</router-link>
+            <a draggable="false" href="/#contact">CONTACT</a>
           </li>
         </ul>
       </div>
@@ -92,11 +92,21 @@ export default {
         this.hide = false;
       }
     });
+
+
+  },
+  methods: {
+    toggleMenu() {
+      this.navbar = !this.navbar;
+      document.getElementsByTagName('html')[0].style.overflowY = this.navbar ? 'hidden' : 'visible';
+    },
   },
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+
+
 .logo {
   filter: invert(56%) sepia(62%) saturate(6303%) hue-rotate(202deg)
     brightness(91%) contrast(90%);

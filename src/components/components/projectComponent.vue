@@ -24,11 +24,11 @@
       <p class="font-semibold text-darkGrey text-xl" :class="{'md:text-right' : reverse}">
         {{ project.description }}
       </p>
-      <button
+      <router-link :to="'/'+ project.slug"
         class="w-fit bg-marrone1 text-background font-bold text-lg px-2 py-1 hover:bg-marrone2"
       >
         STUDY CASE
-      </button>
+      </router-link>
     </div>
   </div>
 </template>

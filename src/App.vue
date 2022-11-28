@@ -1,29 +1,18 @@
 <template>
   <div>
     <header-section class="fixed w-full z-50" />
-    <hero-section class="pt-28 z-0" ref="home" />
-    <about-section class="md:pt-10 z-0" ref="about" />
-    <project-section class="px-10 mt-14 z-0" ref="project" />
-    <contact-section class="px-10 mt-14 z-0" ref="contact" />
+    <router-view></router-view>
     <footer-section class="mt-14 z-0" />
   </div>
 </template>
 
 <script>
-import AboutSection from "./components/sections/aboutSection.vue";
-import ContactSection from "./components/sections/contactSection.vue";
-import FooterSection from "./components/sections/footerSection.vue";
 import headerSection from "./components/sections/headerSection.vue";
-import HeroSection from "./components/sections/heroSection.vue";
-import ProjectSection from "./components/sections/projectSection.vue";
 import AOS from "aos";
+import FooterSection from "@/components/sections/footerSection.vue";
 export default {
   components: {
     headerSection,
-    HeroSection,
-    AboutSection,
-    ProjectSection,
-    ContactSection,
     FooterSection,
   },
   data() {
@@ -49,7 +38,6 @@ body {
 @media (max-width: 992px) {
   html {
     overflow-x: hidden !important;
-    overflow-y: visible !important;
   }
   body {
     overflow-x: hidden !important;

@@ -14,9 +14,9 @@
       </p>
       <div data-aos='zoom-in' data-aos-delay='1700'  data-aos-duration='1000'  data-aos-once='true' class="w-fit px-5 py-2 font-semibold sm:text-2xl mt-8 ml-3 bg-marrone1 text-background hover:bg-marrone2">
       
-      <router-link to="#projects" >
+      <a href="/#projects" >
         My Projects
-      </router-link>
+      </a>
       </div>
       <div class="mouse-container bottom-5 w-full justify-center items-end absolute hidden md:flex" >
         <div class="mouse h-16 w-10 border-2 border-grey rounded-full select-none relative">
