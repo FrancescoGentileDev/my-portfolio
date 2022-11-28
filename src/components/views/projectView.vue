@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-28 z-0 flex flex-col gap-14 container mx-auto">
+  <div class="pt-28 z-0 flex flex-col gap-14 container mx-auto px-5 md:px-0">
     <h1
       class="text-secondary uppercase text-5xl font-extrabold text-center mt-10"
     >
