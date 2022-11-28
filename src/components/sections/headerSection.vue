@@ -5,18 +5,30 @@
     ref="header"
   >
     <div class="logo w-16">
-      <a  draggable="false" href="/" class="w-full"
-        ><img  draggable="false" src="../../assets/logo.svg" class="w-full" alt="logo"
+      <a draggable="false" href="/" class="w-full"
+        ><img
+          draggable="false"
+          src="../../assets/logo.svg"
+          class="w-full"
+          alt="logo"
       /></a>
     </div>
     <nav class="relative">
       <ul
         class="gap-10 font text-2xl font-bold text-secondary uppercase hidden sm:flex"
       >
-        <li draggable="false"><router-link  draggable="false" to='#home'>HOME</router-link></li>
-        <li draggable="false"><router-link   draggable="false" to="#about">ABOUT</router-link></li>
-        <li draggable="false"><router-link  draggable="false" to="#projects">PROJECTS</router-link></li>
-        <li draggable="false"><router-link  draggable="false" to="#contact">CONTACT</router-link></li>
+        <li draggable="false">
+          <router-link draggable="false" to="#home">HOME</router-link>
+        </li>
+        <li draggable="false">
+          <router-link draggable="false" to="#about">ABOUT</router-link>
+        </li>
+        <li draggable="false">
+          <router-link draggable="false" to="#projects">PROJECTS</router-link>
+        </li>
+        <li draggable="false">
+          <router-link draggable="false" to="#contact">CONTACT</router-link>
+        </li>
       </ul>
 
       <div class="menu cross menu--1 sm:hidden">
@@ -38,10 +50,18 @@
         <ul
           class="gap-10 text-2xl font-bold text-secondary uppercase flex flex-col items-end p-6"
         >
-          <li>Home</li>
-          <li>About</li>
-          <li>Projects</li>
-          <li>Contact</li>
+          <li draggable="false">
+            <router-link draggable="false" to="#home">HOME</router-link>
+          </li>
+          <li draggable="false">
+            <router-link draggable="false" to="#about">ABOUT</router-link>
+          </li>
+          <li draggable="false">
+            <router-link draggable="false" to="#projects">PROJECTS</router-link>
+          </li>
+          <li draggable="false">
+            <router-link draggable="false" to="#contact">CONTACT</router-link>
+          </li>
         </ul>
       </div>
     </nav>
@@ -65,12 +85,10 @@ export default {
       if (!this.hide && scroll < this.hideValue) {
         this.hide = false;
         this.hideValue = scroll;
-      }
-      else if (scroll >= 900 && scroll > this.hideValue) {
+      } else if (scroll >= 900 && scroll > this.hideValue) {
         this.hide = true;
         this.hideValue = scroll;
-      } 
-      else {
+      } else {
         this.hide = false;
       }
     });
