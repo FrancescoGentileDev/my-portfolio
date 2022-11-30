@@ -8,23 +8,23 @@
     <a
       target="_blank"
       :href="project.link"
-      class="w-fit bg-marrone1 text-background font-semibold text-3xl px-3 py-2 mx-auto hover:bg-marrone2"
+      class="w-fit uppercase bg-marrone1 text-background font-semibold text-3xl px-3 py-2 mx-auto hover:bg-marrone2"
     >
-      OPEN LIVE DEMO
+      {{ $t( 'projects.demo' ) }}
     </a>
     <div class="image w-full flex justify-center">
       <img class="w-2/3" :src="image" alt="" />
     </div>
     <div class="description text-2xl font-semibold">
       <h2 class="text-marrone1 uppercase text-3xl font-extrabold">
-        Project Overview
+        {{ $t( 'projects.overview' ) }}
       </h2>
       <p ref="description" class="text-tertiary text-description text-xl font-medium mt-10">
       </p>
     </div>
     <div class="tech flex flex-col gap-5">
       <h2 class="text-marrone1 uppercase text-3xl font-extrabold">
-        Technologies
+        {{ $t( 'projects.tech' ) }}
       </h2>
       <ul
         class="pill flex flex-wrap gap-4 text-1xl mt-10 max-w-7xl mx-auto justify-center"
@@ -36,7 +36,7 @@
       </ul>
     </div>
     <div v-if="project.extraImages" class="">
-        <h2 class="text-marrone1 uppercase text-3xl font-bold mb-10">Some screen of site</h2>
+        <h2 class="text-marrone1 uppercase text-3xl font-bold mb-10"> {{ $t( 'projects.screen' ) }} </h2>
         <div class="flex flex-wrap gap-5">
             <img v-for="(image, index) in project.extraImages" :key="index" :src="getImg(image,index)" alt="" class="w-full">
         </div>
@@ -46,7 +46,7 @@
       @click="$router.back()"
       class="w-fit ring-4 cursor-pointer ring-marrone1 text-tertiary font-semibold text-3xl px-3 py-2 mx-auto hover:bg-marrone1 hover:text-background"
     >
-      BACK
+      {{ $t( 'projects.back' ) }}
     </a>
     </div>
   </div>
@@ -77,12 +77,23 @@ export default {
       `/src/assets/projects/${this.project.image}`,
       import.meta.url
     ).href;
-
+    document.title = `${this.project.name} | Francesco Gentile`;
+    document.head.querySelector('meta[name="description"]').attributes.content.value = this.project.description;
+    document.head.querySelector('meta[property="og:title"]').attributes.content.value = this.project.name;
+    document.head.querySelector('meta[property="og:description"]').attributes.content.value = this.project.description;
+    document.head.querySelector('meta[property="og:image"]').attributes.content.value = this.image;
+    document.head.querySelector('meta[property="og:url"]').attributes.content.value = `https://francescogentile.dev/${this.$route.path}`;    
+    document.head.querySelector('meta[property="og:type"]').attributes.content.value = `project`;    
+    
     console.log(this.project);
   },
   mounted() {
+
+
+
+
     if(this.project.longDescription) {
-    let string = this.project.longDescription.split('.');
+    let string = this.$t(`projects.items[${this.project.id}].longDescription`).split('.');
     string.forEach((s, index) => {
       if (index === string.length - 1) {
         this.$refs.description.innerHTML += `<p> ${s}</p>`;
@@ -94,7 +105,7 @@ export default {
     console.log(string)  
     }
     else {
-      this.$refs.description.innerHTML = this.project.description;
+      this.$refs.description.innerHTML = this.$t(`projects.items[${this.project.id}].description`)
     }
   },
   methods: {

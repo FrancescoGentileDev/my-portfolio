@@ -1,12 +1,13 @@
 <template>
   <div id="projects" class="container mx-auto">
     <title-component
-      title="projects"
-      subTitle="Here you will find some of my project with a live demo"
+      :title="$t('projects.title')"
+      :subTitle="$t('projects.subtitle')"
     />
     <div class="projects-container flex flex-col mt-16 gap-12">
       <project-component
         v-for="(project, index) in projects"
+        :index="index"
         :key="index"
         :project="project"
         :reverse="index % 2 !==0"

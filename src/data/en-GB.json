@@ -1,0 +1,44 @@
+{
+	"about": {
+		"paragraph": "",
+		"paragraph1": "Hello stranger! I'm Francesco, i live in Italy and i enjoy creating things that live on internet.\n",
+		"paragraph2": "My interest in web development started back in high school, where i created a student blog. In 2020 I began to study React and Node.js as a self-taught, for a project I had in mind (ultimate-notification).",
+		"paragraph3": "I fell in love with the idea of ​​being able to create things that could then be sought by anyone i understood that this was my way. I attended a bootcamp to learn the base of this job.",
+		"paragraph4": "Now I'm ready for job opportunities where i can contribute, create, learn and grow. Below you will find some projects that I have developed.",
+		"paragraph5": "If you have a good opportunity that matches my skills and experience then don't hesitate, contact me.",
+		"skills": "skills",
+		"subsubtitle": "Here you will find more information about me, and my current skills in programming and technology",
+		"subtitle": "get know me",
+		"title": "about me"
+	},
+	"contact": {
+		"email": "Email Address",
+		"message": "Message",
+		"name": "Name",
+		"send": "Send",
+		"subtitle": "Here you can contact me, submitting the form or with the socials below",
+		"title": "Contact"
+	},
+	"header": {
+		"about": "about me",
+		"contact": "contact",
+		"cv": "download cv",
+		"home": "home",
+		"projects": "projects"
+	},
+	"hero": {
+		"button": "My Projects",
+		"name": "Hi my name is,",
+		"subtitle": "I'm a web developer, and a technology enthusiast."
+	},
+	"projects": {
+		"back": "back",
+		"case": "study case",
+		"demo": "open preview",
+		"overview": "Project Overview",
+		"screen": "Some screens of site",
+		"subtitle": "Here you will find some of my project with a live demo",
+		"tech": "Technologies",
+		"title": "projects"
+	}
+}

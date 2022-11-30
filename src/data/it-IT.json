@@ -1,0 +1,44 @@
+{
+	"about": {
+		"paragraph": "\n\n\n\n\n\n\n\n",
+		"paragraph1": "Ciao! Sono Francesco, vivo in Italia e mi diverto a creare cose che vivono su internet.",
+		"paragraph2": "Il mio interesse per lo sviluppo web è iniziato al liceo, dove ho creato un blog studentesco con wordpress. Nel 2020 ho iniziato a studiare React e Node.js da autodidatta, sviluppando una piccola piattaforma",
+		"paragraph3": "",
+		"paragraph4": "Ora sono pronto per opportunità di lavoro in cui posso contribuire, creare, imparare e crescere. Di seguito troverete alcuni progetti che ho sviluppato.",
+		"paragraph5": "Se hai una buona opportunità che corrisponde alle mie capacità ed esperienze, non esitare, contattami.",
+		"skills": "competenze",
+		"subsubtitle": "Qui troverai maggiori informazioni su di me e sulle mie attuali competenze in programmazione",
+		"subtitle": "conoscimi",
+		"title": "chi sono"
+	},
+	"contact": {
+		"email": "Indirizzo Email",
+		"message": "Messaggio",
+		"name": "Nome",
+		"send": "Invia",
+		"subtitle": "Qui puoi contattarmi, inviando il form o con i social sotto",
+		"title": "Contattami"
+	},
+	"header": {
+		"about": "about",
+		"contact": "contattami",
+		"cv": "scarica cv",
+		"home": "home",
+		"projects": "progetti"
+	},
+	"hero": {
+		"button": "Progetti",
+		"name": "Ciao, mi chiamo,",
+		"subtitle": "Sono un web developer, e un appassionato di tecnologia"
+	},
+	"projects": {
+		"back": "indietro",
+		"case": "dettaglio",
+		"demo": "apri anteprima",
+		"overview": "Panoramica del progetto",
+		"screen": "Alcune schermate del sito",
+		"subtitle": "Qui troverai alcuni dei miei progetti con una demo live",
+		"tech": "Tecnologie",
+		"title": "progetti"
+	}
+}

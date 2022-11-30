@@ -1,7 +1,7 @@
 <template>
   <div
-    class="h-24 flex items-center justify-between px-5 md:px-40 pt-3 bg-background bg-opacity-30 border-b-2 border-opacity-10 border-grey backdrop-blur-md transition-all duration-200 top-0"
-    :class="{ '-top-28': hide}"
+    class="h-24 flex items-center justify-between px-5 lg:px-40 pt-3 bg-background bg-opacity-30 border-b-2 border-opacity-10 border-grey backdrop-blur-md transition-all duration-200 top-0"
+    :class="{ '-top-28': hide }"
     ref="header"
   >
     <div class="logo w-16">
@@ -15,23 +15,32 @@
     </div>
     <nav class="relative">
       <ul
-        class="gap-10 font text-2xl font-bold text-secondary uppercase hidden sm:flex"
+        class="gap-10 font text-2xl font-bold text-secondary uppercase hidden md:flex"
       >
         <li draggable="false">
-          <a draggable="false" href="/#home">HOME</a>
+          <a draggable="false" href="/#home">{{ $t("header.home") }}</a>
         </li>
         <li draggable="false">
-          <a draggable="false" href="/#about">ABOUT</a>
+          <a draggable="false" href="/#about">{{ $t("header.about") }}</a>
         </li>
         <li draggable="false">
-          <a draggable="false" href="/#projects">PROJECTS</a>
+          <a draggable="false" href="/#projects">{{ $t("header.projects") }}</a>
         </li>
         <li draggable="false">
-          <a draggable="false" href="/#contact">CONTACT</a>
+          <a draggable="false" href="/#contact">{{ $t("header.contact") }}</a>
+        </li>
+        <li draggable="false">
+          <a
+            class="bg-marrone1 text-background font-semibold px-1 py-2 hover:bg-marrone2 text-xl"
+            draggable="false"
+            target="_blank"
+           href="/src/assets/curriculum Francesco Gentile.pdf"
+            >{{ $t("header.cv") }}</a
+          >
         </li>
       </ul>
 
-      <div class="menu cross menu--1 sm:hidden">
+      <div class="menu cross menu--1 md:hidden">
         <label>
           <input type="checkbox" @change="toggleMenu" />
           <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -43,24 +52,35 @@
         </label>
       </div>
       <div
-        class="hiddenNav fixed w-3/5 h-screen hrefp-24 transition-all duration-300 ease-out top-24 delay-100 sm:hidden bg-background bg-opacity-90 backdrop-blur-lg"
+        class="hiddenNav fixed w-3/5 h-screen hrefp-24 transition-all duration-300 ease-out top-24 delay-100 md:hidden bg-background bg-opacity-90 backdrop-blur-lg"
         ref="hiddenNav"
-        :class="{ 'right-0': navbar, '-right-72': !navbar, 'active': navbar  }"
+        :class="{ 'right-0': navbar, '-right-96': !navbar, active: navbar }"
       >
         <ul
           class="gap-10 text-2xl font-bold text-secondary uppercase flex flex-col items-end p-6"
         >
           <li draggable="false">
-            <a draggable="false" href="/#home">HOME</a>
+            <a draggable="false" href="/#home">{{ $t("header.home") }}</a>
           </li>
           <li draggable="false">
-            <a draggable="false" href="/#about">ABOUT</a>
+            <a draggable="false" href="/#about">{{ $t("header.about") }}</a>
           </li>
           <li draggable="false">
-            <a draggable="false" href="/#projects">PROJECTS</a>
+            <a draggable="false" href="/#projects">{{
+              $t("header.projects")
+            }}</a>
           </li>
           <li draggable="false">
-            <a draggable="false" href="/#contact">CONTACT</a>
+            <a draggable="false" href="/#contact">{{ $t("header.contact") }}</a>
+          </li>
+          <li draggable="false">
+            <a
+              class="bg-marrone1 text-background font-semibold px-1 py-2 hover:bg-marrone2 text-xl"
+              draggable="false"
+              target="_blank"
+              href="/src/assets/curriculum Francesco Gentile.pdf"
+              >{{ $t("header.cv") }}</a
+            >
           </li>
         </ul>
       </div>
@@ -92,21 +112,19 @@ export default {
         this.hide = false;
       }
     });
-
-
   },
   methods: {
     toggleMenu() {
       this.navbar = !this.navbar;
-      document.getElementsByTagName('html')[0].style.overflowY = this.navbar ? 'hidden' : 'visible';
+      document.getElementsByTagName("html")[0].style.overflowY = this.navbar
+        ? "hidden"
+        : "visible";
     },
   },
 };
 </script>
 
-<style lang="scss">
-
-
+<style lang="scss" scoped>
 .logo {
   filter: invert(56%) sepia(62%) saturate(6303%) hue-rotate(202deg)
     brightness(91%) contrast(90%);

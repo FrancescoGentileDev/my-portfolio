@@ -1,21 +1,25 @@
 <template>
   <div class="h-screen hero-background" id="home">
+  <div class="locale flex gap-3 container ml-9 mt-3 absolute ">
+  <img ref="it" class="max-w-[3rem] opacity-20 cursor-pointer rounded-md" src="/src/assets/it.svg" alt="">
+  <img ref="gb" class="max-w-[3rem] opacity-20 cursor-pointer rounded-md" src="/src/assets/gb.svg" alt="">
+  </div>
   <socials-component class="hidden md:block absolute" data-aos='fade-right' data-aos-delay='1300'  data-aos-duration='1300' data-aos-once='true'/>
     <div
       class="md:w-6/12 px-10 h-full container mx-auto flex flex-col justify-center items-left relative"
     >
-      <h3 data-aos='fade-left' data-aos-delay='300'  data-aos-duration='700'  data-aos-once='true' class="sm:text-3xl text-md  text-marrone2 font-semibold" >Hi my name is,</h3>
+      <h3 data-aos='fade-left' data-aos-delay='300'  data-aos-duration='700'  data-aos-once='true' class="sm:text-3xl text-md  text-marrone2 font-semibold" >{{ $t('hero.name') }}</h3>
       <h1 data-aos='flip-right' data-aos-delay='800' data-aos-duration='1000'  data-aos-once='true'   class="sm:text-8xl text-6xl font-extrabold text-quaternary">Francesco Gentile</h1>
       <p  data-aos='fade-down' data-aos-delay='1200'  data-aos-duration='1300'  data-aos-once='true'  class="md:text-7xl text-4xl text-secondary font-extrabold mt-4 mb-7">
-        Learning new things every day
+        Full stack web developer
       </p>
       <p data-aos='fade' data-aos-delay='1400'  data-aos-duration='1000'  data-aos-once='true' class="md:text-2xl font-semibold text-darkGrey">
-        I'm a web developer, and a technology enthusiast.
+        {{ $t('hero.subtitle') }}
       </p>
       <div data-aos='zoom-in' data-aos-delay='1700'  data-aos-duration='1000'  data-aos-once='true' class="w-fit px-5 py-2 font-semibold sm:text-2xl mt-8 ml-3 bg-marrone1 text-background hover:bg-marrone2">
       
       <a href="/#projects" >
-        My Projects
+       {{ $t('hero.button') }}
       </a>
       </div>
       <div class="mouse-container bottom-5 w-full justify-center items-end absolute hidden md:flex" >
@@ -30,7 +34,38 @@
 <script>
 import socialsComponent from '../components/socialsComponent.vue';
 export default {
-  components: { socialsComponent },};
+  components: { socialsComponent },
+  mounted() {
+    const it = this.$refs.it;
+    const gb = this.$refs.gb;
+    if(this.$i18n.locale === 'it') {
+      it.classList.remove('opacity-20');
+      it.classList.add('opacity-100');
+    } else {
+      gb.classList.remove('opacity-20');
+      gb.classList.add('opacity-100');
+    }
+    
+    it.addEventListener('click', () => {
+      if(it.classList.contains('opacity-20')){
+        it.classList.remove('opacity-20');
+        it.classList.add('opacity-100');
+        gb.classList.remove('opacity-100');
+        gb.classList.add('opacity-20');
+        this.$i18n.locale = 'it';
+      }
+    });
+    gb.addEventListener('click', () => {
+      if(gb.classList.contains('opacity-20')){
+        gb.classList.remove('opacity-20');
+        gb.classList.add('opacity-100');
+        it.classList.remove('opacity-100');
+        it.classList.add('opacity-20');
+        this.$i18n.locale = 'en';
+      }
+    });
+  }
+  }
 </script>
 
 <style lang="scss" scoped>

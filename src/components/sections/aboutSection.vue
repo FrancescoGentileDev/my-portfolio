@@ -1,38 +1,29 @@
 <template>
   <div id="about" class="container mx-auto pb-10">
-    <title-component title="about me" subTile='Here you will find more information about me, and my current skills in programming and technology'/>
+    <title-component :title="$t('about.title')" :subTitle="$t('about.subsubtitle')"/>
     <div class="abouts-container flex flex-col mt-16 gap-7">
       <div class="knowme flex flex-wrap justify-center items-center gap-9">
         <div class="flex flex-col h-full md:w-1/2 text-center px-2">
           <h4 class="uppercase font-bold text-3xl text-secondary text-center" data-aos='zoom-in'  data-aos-once='true' data-aos-delay='100' data-aos-duration='500'>
-            Get know me
+            {{ $t('about.subtitle') }}
           </h4>
           <div
             class="text-tertiary text-xl mt-10 md:text-left flex flex-col gap-4"
           >
             <p data-aos='fade'  data-aos-once='true'>
-              Hello stranger! I'm Francesco, i live in Italy and i enjoy
-              creating things that live on internet.
+              {{ $t('about.paragraph1') }}
             </p>
             <p class="hidden sm:block"  data-aos='fade'  data-aos-once='true'>
-              My interest in web development started back in high school, where
-              i created a student blog. In 2020 I began to study React and
-              Node.js as a self-taught, for a project I had in mind
-              (ultimate-notification).
+              {{ $t('about.paragraph2') }}
             </p>
             <p  data-aos='fade-down' data-aos-delay='20'  data-aos-once='true'>
-              I fell in love with the idea of ​​being able to create things that
-              could then be sought by anyone i understood that this was my way.
-              I attended a bootcamp to learn the base of this job.
+              {{ $t('about.paragraph3') }}
             </p>
             <p  data-aos='fade-down' data-aos-delay='40'  data-aos-once='true'>
-              Now I'm ready for job opportunities where I can
-              <strong>contribute, create, learn and grow</strong>. Below you
-              will find some projects that I have developed.
+              {{ $t('about.paragraph4') }}
             </p>
             <p  data-aos='fade-down' data-aos-delay='60'  data-aos-once='true'>
-              If you have a good opportunity that matches my skills and
-              experience then don't hesitate, <strong>contact me</strong>.
+              {{ $t('about.paragraph5') }}
             </p>
           </div>
         </div>
@@ -47,7 +38,7 @@
 
       <div class="skills md:pt-10">
         <h4 class="uppercase font-bold text-3xl text-secondary text-center">
-          Skills
+          {{ $t('about.skills') }}
         </h4>
         <ul
           class="skills-pill flex flex-wrap gap-4 text-1xl mt-10 max-w-7xl mx-auto justify-center" ref="skills"
@@ -249,7 +240,7 @@ mounted() {
   gap: 0.2rem;
   align-items: center;
 }
-svg {
+.skills-pill svg {
   width: 18px;
   fill: white;
 }
