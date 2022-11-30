@@ -1,6 +1,6 @@
 <template>
   <div class="h-screen hero-background" id="home">
-  <div class="locale flex gap-3 container ml-9 mt-3 absolute ">
+  <div class="locale flex gap-3 container ml-9 mt-3 absolute z-40">
   <img ref="it" class="max-w-[3rem] opacity-20 cursor-pointer rounded-md" src="/src/assets/it.svg" alt="">
   <img ref="gb" class="max-w-[3rem] opacity-20 cursor-pointer rounded-md" src="/src/assets/gb.svg" alt="">
   </div>
