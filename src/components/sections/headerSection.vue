@@ -34,7 +34,7 @@
             class="bg-marrone1 text-background font-semibold px-1 py-2 hover:bg-marrone2 text-xl"
             draggable="false"
             target="_blank"
-           href="/src/assets/curriculum Francesco Gentile.pdf"
+           href="/curriculum Francesco Gentile.pdf"
             >{{ $t("header.cv") }}</a
           >
         </li>

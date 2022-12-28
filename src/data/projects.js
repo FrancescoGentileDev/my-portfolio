@@ -3,6 +3,62 @@ const projects = [
     id: 0,
     locales: {
       en: {
+        description: ' Boover is a platform where freelancers can sign up and receive commissions. ',
+        longDescription: `Boover is a high-quality freelance search platform, inspired by Fiverr. We have developed a perfectly functioning platform where our clients can find the right professional for their needs, send messages and leave reviews.
+
+        Freelancers can sign up, publish their profile and receive feedback from clients. Thanks to our "choice" program, freelancers can choose to pay a fee to appear at the top of search results and in their category, increasing their visibility and attractiveness to clients.
+        
+        Our goal is to offer an easy-to-use and intuitive platform for both freelancers and clients, making the process of searching and selecting professionals as simple as possible.We are proud of the final result and hope that Boover will become a valuable addition to our portfolio.  `
+      },
+      it: {
+        description: 'Boover è una piattaforma dove i freelance possono iscriversi e ricevere commissioni.',
+        longDescription: `Boover è una piattaforma per la ricerca di freelancer di alta qualità, ispirata a Fiverr. Abbiamo sviluppato una piattaforma perfettamente funzionante dove i nostri clienti possono trovare il professionista giusto per ogni loro esigenza, inviare messaggi e lasciare recensioni.
+
+        I freelancer possono iscriversi, pubblicare il loro profilo e ricevere feedback dai clienti. Grazie al nostro programma "choice", i freelancer possono scegliere di pagare una quota per comparire in cima ai risultati di ricerca e nella loro categoria, aumentando così la loro visibilità e attrattiva per i clienti.
+        
+        Il nostro obiettivo è quello di offrire una piattaforma facile da usare e intuitiva sia per i freelancer che per i clienti, rendendo il processo di ricerca e selezione dei professionisti il più semplice possibile.iamo orgogliosi del risultato finale e speriamo che Boover possa diventare una preziosa aggiunta al nostro portfolio. `
+      }
+    },
+    name: 'Boover',
+    slug: 'boover',
+    description: ' Boover is a platform where freelancers can sign up and receive commissions. ',
+    longDescription: `Boover is a high-quality freelance search platform, inspired by Fiverr. We have developed a perfectly functioning platform where our clients can find the right professional for their needs, send messages and leave reviews.`,
+    image: 'boover.png',
+    link: 'https://boover-project.000webhostapp.com/',
+    github: 'https://github.com/FrancescoGentileDev/Boover-project',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL', 'tailwindcss', 'laravel', 'vuejs', 'axios', 'fontawesome', 'daisyUI', 'merakiUI', 'Unsplash', 'brainTree', 'Google Fonts'],
+    extraImagesPath: 'boover',
+    extraImages: [
+      {
+        image: 'home.jpeg',
+        description: 'Home page',
+      },
+      {
+        image: 'skillricerca.jpeg',
+        description: 'Search page',
+      },
+      {
+        image: 'dashboard.jpeg',
+        description: 'User dashboard',
+      },
+      {
+        image: 'sponsor.png',
+        description: 'Sponsor select buy page',
+      },
+      {
+        image: 'sponsor-countDown.jpeg',
+        description: 'Countdown for sponsorships',
+      },
+      {
+        image: 'team.png',
+        description: 'Team page',
+      },
+    ]
+  },
+  {
+    id: 1,
+    locales: {
+      en: {
         description:
           "A platform for streamers to send notifications to their viewers in real time through discord and telegram",
         longDescription: `
@@ -83,7 +139,7 @@ Another point where I focused was the personalization of messages. Through the m
     ],
   },
   {
-    id: 1,
+    id: 2,
     name: "Netflix Clone",
     slug: "netflix-clone",
     locales: {
@@ -115,7 +171,7 @@ Another point where I focused was the personalization of messages. Through the m
     ],
   },
   {
-    id: 2,
+    id: 3,
     name: "spotify clone",
     slug: "spotify-clone",
     locales: {
@@ -136,7 +192,7 @@ Another point where I focused was the personalization of messages. Through the m
     technologies: ["HTML", "CSS", "JavaScript", "Google Fonts", "Font Awesome"],
   },
   {
-    id: 3,
+    id: 4,
     name: "boolPress",
     slug: "boolpress",
     locales: {
@@ -170,7 +226,7 @@ Another point where I focused was the personalization of messages. Through the m
     ],
   },
   {
-    id: 4,
+    id: 5,
     name: "whatsapp poll bot",
     slug: "whatsapp-poll-bot",
     locales: {
