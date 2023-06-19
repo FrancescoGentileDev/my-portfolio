@@ -29,7 +29,7 @@
         </div>
         <div class="image flex max-w-xs" data-aos='flip-right' data-aos-delay='100'  data-aos-duration='1000' >
           <img
-            src="https://media-exp1.licdn.com/dms/image/C4E03AQHsIWb7TfGL5A/profile-displayphoto-shrink_800_800/0/1655475496666?e=1674691200&v=beta&t=-cFDMmmYj0L5IvwLnFfEEEW7lKRgc6itz5-ju0-dis4"
+            src="../../assets/profilePhoto.jpg"
             alt="my foto"
             class="shadow-xl rounded-full ring-8 ring-secondary"
           />
